@@ -1,0 +1,22 @@
+import { IsNotEmpty, IsEmail,MinLength, MaxLength } from 'class-validator';
+
+export class loginUserDto {
+
+
+  @IsNotEmpty()
+  @IsEmail()
+  email: string;
+
+  @IsNotEmpty()
+  @MinLength(7)
+  @MaxLength(12)
+  password: string;
+
+  token:string
+
+  status:boolean
+
+  accessToken:object;
+
+  _id:string
+}

@@ -1,0 +1,24 @@
+.main{
+  @apply min-h-screen bg-gray-50 py-6 flex flex-col justify-center sm:py-12 p-3
+}
+
+.curve{
+    @apply absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-700 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl 
+}
+
+.coverDiv{
+ @apply relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20
+}
+
+.heading{
+    @apply text-2xl text-center font-semibold font-mono
+}
+
+.verify{
+    @apply  bg-green-200 h-7 text-center text-black text-lg 
+}
+
+.orDiv{
+    @apply my-2 mb-3 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300
+}
+
