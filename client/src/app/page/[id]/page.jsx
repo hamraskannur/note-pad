@@ -59,7 +59,11 @@ const page = () => {
 
   const saveNote = async () => {
     if (note.title.trim().length > 3) {
-      const data = await noteUpdate(note);
+      let copy = { ...note };
+
+      copy.backgroundColor =backgroundColor  ;
+      copy.textColor = textColor;
+      const data = await noteUpdate(copy);
 
       if (data.status) {
         setNote(data.note);
@@ -67,7 +71,6 @@ const page = () => {
       } else {
         errorToast("some think wrong");
       }
-   
     } else {
       errorToast("Please fill in the Title Name");
     }
@@ -160,7 +163,10 @@ const page = () => {
               </div>
 
               <div className="flex justify-end m-5 w-full">
-                <button onClick={saveNote } className="block    rounded-md bg-slate-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-slate-500">
+                <button
+                  onClick={saveNote}
+                  className="block    rounded-md bg-slate-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-slate-500"
+                >
                   save
                 </button>
               </div>
@@ -168,7 +174,7 @@ const page = () => {
           ) : (
             <div className="flex justify-end m-5 w-full">
               <button
-                onClick={() => setEdit(true) }
+                onClick={() => setEdit(true)}
                 className="block    rounded-md bg-slate-700 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-slate-500"
               >
                 Edit
