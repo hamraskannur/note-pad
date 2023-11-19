@@ -42,7 +42,6 @@ const page = () => {
           backgroundColor,
           textColor,
         });
-    
         if (data.status) {
             router.push("/");
             successToast("note saved");

@@ -8,7 +8,7 @@ async function bootstrap() {
     // origin: [
     //   'https://main.d34f8o8eh1m58q.amplifyapp.com','https://hireon.labonnz.club','http://localhost:3000'
     // ],
-    origin: ['http://localhost:3001'],
+    origin: ['http://localhost:3000'],
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'HEAD', 'OPTIONS'],
     credentials: true,
     // exposedHeaders: ['Content-Length', 'X-Foo', 'X-Bar'],
@@ -19,6 +19,6 @@ async function bootstrap() {
       whitelist: false,
     }),
   );
-  await app.listen(3000);
+  await app.listen(3001);
 }
 bootstrap();
